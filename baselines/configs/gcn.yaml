@@ -1,0 +1,4 @@
+name: GCN
+model: {hidden_dim: 256, num_layers: 5, dropout: 0.1}
+data: {train: null, validation: null, smiles_column: canonical_smiles, label_column: target_hard}
+training: &training {batch_size: 256, evaluation_batch_size: 512, learning_rate: 0.0003, weight_decay: 0.00001, max_epochs: 50, patience: 10, min_delta_auroc: 0.0001}

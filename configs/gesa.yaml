@@ -1,0 +1,57 @@
+metadata:
+  model_name: GESA
+  full_name: Generative-space Expanded Synthetic Accessibility
+  public_checkpoint_seed: 123
+
+architecture:
+  hidden_dim: 256
+  num_layers: 5
+  gat_heads: 4
+  encoder_dropout: 0.1
+  projection_dim: 256
+  gate_hidden_dim: 128
+  attention_hidden_dim: 128
+  xsa_input_dim: 14
+  xsa_hidden_dim: 64
+  xsa_output_dim: 32
+  head_hidden_dim: 128
+  nonencoder_dropout: 0.3
+
+training:
+  seeds: [42, 123, 2026]
+  warmup_epochs: 5
+  max_epochs: 40
+  patience: 10
+  min_delta_auroc: 0.0001
+  batch_size: 256
+  evaluation_batch_size: 512
+  loader_workers: 1
+  encoder_learning_rate: 0.00002
+  head_learning_rate: 0.0003
+  weight_decay: 0.00001
+  scheduler_factor: 0.5
+  scheduler_patience: 3
+  minimum_learning_rate: 0.000001
+  gradient_clip_norm: 5.0
+  amp: true
+  early_stopping_metric: internal_validation_AUROC_only
+  checkpoint_metric: internal_validation_AUROC_only
+
+inference:
+  checkpoint: weights/GESA.pt
+  score_column: GESA_score
+  score_semantics: probability_of_HS
+  positive_class: HS
+  positive_label: 1
+  negative_class: ES
+  negative_label: 0
+  default_decision_rule: GESA_score >= 0.5 means HS
+  higher_score_means: harder_to_synthesize
+  default_batch_size: 128
+
+data:
+  train: null
+  validation: null
+  smiles_column: canonical_smiles
+  label_column: target_hard
+  note: Set train and validation paths before training; large source datasets are not bundled.
