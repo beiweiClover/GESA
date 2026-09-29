@@ -1,0 +1,71 @@
+{
+  "format": "gesa-lossless-target-version-patch-v1",
+  "original_version": "gesa-target-original-587021-v1",
+  "released_version": "gesa-target-single-component-582227-v1",
+  "released_data_doi": "10.5281/zenodo.22874755",
+  "indexing": "original_row is zero-based after the CSV header",
+  "splits": {
+    "train": {
+      "original": {
+        "rows": 472635,
+        "bytes": 123010193,
+        "sha256": "8da20317d9a5072ba6b65b44cda0d3ce8c18ffc912d2c87e970ee79f7751e1cd",
+        "ES": 147851,
+        "HS": 324784
+      },
+      "released": {
+        "rows": 469078,
+        "bytes": 122099627,
+        "sha256": "32b154d0f13e83b0543e924fc10e49835a1b3343eef742ed30de39e6de8c3826",
+        "ES": 145285,
+        "HS": 323793
+      },
+      "removed_rows": 3557
+    },
+    "validation": {
+      "original": {
+        "rows": 59084,
+        "bytes": 16749221,
+        "sha256": "1cf09cf9d0fb58e29170fbc0abb83f703c058ee0c85026a8f414f977b9451e00",
+        "ES": 18494,
+        "HS": 40590
+      },
+      "released": {
+        "rows": 58394,
+        "bytes": 16555631,
+        "sha256": "83535a2fc23f3e1d7bb5e368d99e436d72614e18a4691ec4a8622f47b6338265",
+        "ES": 17923,
+        "HS": 40471
+      },
+      "removed_rows": 690
+    },
+    "test": {
+      "original": {
+        "rows": 55302,
+        "bytes": 15272609,
+        "sha256": "e882af489514f6f5cfd07b4dd97d7afa85eede77ef41b12dfb4ac8f9d2dd70a3",
+        "ES": 16595,
+        "HS": 38707
+      },
+      "released": {
+        "rows": 54755,
+        "bytes": 15122562,
+        "sha256": "7d37c396ec931b715172902469103fda6106643a511c0b1e8118e10616e3d045",
+        "ES": 16178,
+        "HS": 38577
+      },
+      "removed_rows": 547
+    }
+  },
+  "patch": {
+    "file": "removed_rows.jsonl.gz",
+    "bytes": 426956,
+    "sha256": "7226e75b2b194550b322223b3f40ecc23c692ada82f5064253c9ca99f68891a7"
+  },
+  "legacy_source_sha256": "7c0b6fe9b2b618be83bf4521e4536f899d15cb846694e41890ff13853f7c05f7",
+  "legacy_ordered_input_sha256": {
+    "train": "652459fe687168ed57540bde0817fceb59947eedea043296cc9625e78d868ace",
+    "validation": "7c80d9e919f35b3ea2e7a5cc9d0ffa12ab897bdc0f82940fbe025c615422d7b2",
+    "test": "cea4234737cab62558e5d5df88e06f1e0872d4ed7b282b203f379e887bbe3406"
+  }
+}

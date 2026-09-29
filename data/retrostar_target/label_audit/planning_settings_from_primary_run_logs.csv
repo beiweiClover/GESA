@@ -1,0 +1,7 @@
+source,partition,iterations,expansion_topk,fp_dim,timeout_per_molecule,use_value_fn,starting_molecules,mlp_templates,mlp_model_dump,value_model
+TarPass,task0,150,50,2048,600,True,origin_dict.csv,template_rules_1.dat,saved_rollout_state_1_2048.ckpt,best_epoch_final_4.pt
+TarPass,task1,150,50,2048,600,True,origin_dict.csv,template_rules_1.dat,saved_rollout_state_1_2048.ckpt,best_epoch_final_4.pt
+TarPass,task2,150,50,2048,600,True,origin_dict.csv,template_rules_1.dat,saved_rollout_state_1_2048.ckpt,best_epoch_final_4.pt
+MolGenBench,task0,150,50,2048,600,True,origin_dict.csv,template_rules_1.dat,saved_rollout_state_1_2048.ckpt,best_epoch_final_4.pt
+MolGenBench,task1,150,50,2048,600,True,origin_dict.csv,template_rules_1.dat,saved_rollout_state_1_2048.ckpt,best_epoch_final_4.pt
+MolGenBench,task2,150,50,2048,600,True,origin_dict.csv,template_rules_1.dat,saved_rollout_state_1_2048.ckpt,best_epoch_final_4.pt

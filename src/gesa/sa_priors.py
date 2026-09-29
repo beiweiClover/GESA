@@ -93,11 +93,18 @@ def raw_sa_priors(molecule: Chem.Mol, fragment_scores: Dict[int, float]) -> np.n
 
 
 def standardized_sa_priors(
-    molecules: Sequence[Chem.Mol], score_path: str | Path | None = None
+    molecules: Sequence[Chem.Mol], score_path: str | Path | None = None,
+    *, mean: Sequence[float] | None = None, std: Sequence[float] | None = None,
 ) -> torch.Tensor:
     scores = load_fragment_scores(score_path)
     raw = np.stack([raw_sa_priors(molecule, scores) for molecule in molecules])
-    standardized = ((raw - SCALER_MEAN) / SCALER_STD).astype(np.float32)
+    if (mean is None) != (std is None):
+        raise ValueError('Provide both SA-prior mean and standard deviation')
+    selected_mean = SCALER_MEAN if mean is None else np.asarray(mean, dtype=np.float64)
+    selected_std = SCALER_STD if std is None else np.asarray(std, dtype=np.float64)
+    if selected_mean.shape != (14,) or selected_std.shape != (14,) or not np.all(np.isfinite(selected_mean)) or not np.all(np.isfinite(selected_std)) or np.any(selected_std <= 0):
+        raise ValueError('Expected fourteen finite SA-prior means and positive standard deviations')
+    standardized = ((raw - selected_mean) / selected_std).astype(np.float32)
     return torch.from_numpy(standardized)
 
 

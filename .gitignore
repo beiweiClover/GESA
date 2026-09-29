@@ -10,3 +10,4 @@ Thumbs.db
 !.env.example
 runs/
 outputs/
+training_data/

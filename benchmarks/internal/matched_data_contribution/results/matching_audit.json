@@ -1,0 +1,302 @@
+{
+  "status": "passed",
+  "scope": "six fixed training lists and TS1\u2013TS4 evaluation data",
+  "N_per_arm": 12000,
+  "ES_HS_per_arm": [
+    6000,
+    6000
+  ],
+  "max_abs_class_specific_SMD": 0.011848435808182069,
+  "maximum_pairwise_feature_differences": {
+    "sascore": 0.14993472824605547,
+    "heavy_atoms": 2.0,
+    "mol_weight": 39.97500000000019,
+    "logp": 0.75,
+    "tpsa": 19.990000000000002,
+    "rotors": 2.0,
+    "rings": 1.0
+  },
+  "class_specific_property_balance": [
+    {
+      "replicate": 20261121,
+      "label": 0,
+      "feature": "sascore",
+      "SMD": -0.008394046510592428
+    },
+    {
+      "replicate": 20261121,
+      "label": 0,
+      "feature": "heavy_atoms",
+      "SMD": -0.009030595467326003
+    },
+    {
+      "replicate": 20261121,
+      "label": 0,
+      "feature": "mol_weight",
+      "SMD": -0.004352725385374941
+    },
+    {
+      "replicate": 20261121,
+      "label": 0,
+      "feature": "logp",
+      "SMD": 0.0027878430966724005
+    },
+    {
+      "replicate": 20261121,
+      "label": 0,
+      "feature": "tpsa",
+      "SMD": 0.005109994631963798
+    },
+    {
+      "replicate": 20261121,
+      "label": 0,
+      "feature": "rotors",
+      "SMD": 0.004361533634526846
+    },
+    {
+      "replicate": 20261121,
+      "label": 0,
+      "feature": "rings",
+      "SMD": -0.0019005540309497593
+    },
+    {
+      "replicate": 20261121,
+      "label": 1,
+      "feature": "sascore",
+      "SMD": -0.004727551791876224
+    },
+    {
+      "replicate": 20261121,
+      "label": 1,
+      "feature": "heavy_atoms",
+      "SMD": 0.005664234969363765
+    },
+    {
+      "replicate": 20261121,
+      "label": 1,
+      "feature": "mol_weight",
+      "SMD": -0.0030991205729674577
+    },
+    {
+      "replicate": 20261121,
+      "label": 1,
+      "feature": "logp",
+      "SMD": 0.008977781154577027
+    },
+    {
+      "replicate": 20261121,
+      "label": 1,
+      "feature": "tpsa",
+      "SMD": 0.005724297467759585
+    },
+    {
+      "replicate": 20261121,
+      "label": 1,
+      "feature": "rotors",
+      "SMD": 0.008869970538478801
+    },
+    {
+      "replicate": 20261121,
+      "label": 1,
+      "feature": "rings",
+      "SMD": 0.005830617369300267
+    },
+    {
+      "replicate": 20261122,
+      "label": 0,
+      "feature": "sascore",
+      "SMD": -0.005699719206916548
+    },
+    {
+      "replicate": 20261122,
+      "label": 0,
+      "feature": "heavy_atoms",
+      "SMD": -0.009341903344841546
+    },
+    {
+      "replicate": 20261122,
+      "label": 0,
+      "feature": "mol_weight",
+      "SMD": -0.0042852115360167125
+    },
+    {
+      "replicate": 20261122,
+      "label": 0,
+      "feature": "logp",
+      "SMD": 0.0035480317274089747
+    },
+    {
+      "replicate": 20261122,
+      "label": 0,
+      "feature": "tpsa",
+      "SMD": 0.004493863718574705
+    },
+    {
+      "replicate": 20261122,
+      "label": 0,
+      "feature": "rotors",
+      "SMD": 0.004116485432141718
+    },
+    {
+      "replicate": 20261122,
+      "label": 0,
+      "feature": "rings",
+      "SMD": -0.002340654397247297
+    },
+    {
+      "replicate": 20261122,
+      "label": 1,
+      "feature": "sascore",
+      "SMD": -0.0032093324261155635
+    },
+    {
+      "replicate": 20261122,
+      "label": 1,
+      "feature": "heavy_atoms",
+      "SMD": 0.005341925847032145
+    },
+    {
+      "replicate": 20261122,
+      "label": 1,
+      "feature": "mol_weight",
+      "SMD": -0.0034921755884721674
+    },
+    {
+      "replicate": 20261122,
+      "label": 1,
+      "feature": "logp",
+      "SMD": 0.009634863356671478
+    },
+    {
+      "replicate": 20261122,
+      "label": 1,
+      "feature": "tpsa",
+      "SMD": 0.011848435808182069
+    },
+    {
+      "replicate": 20261122,
+      "label": 1,
+      "feature": "rotors",
+      "SMD": 0.00989849760299378
+    },
+    {
+      "replicate": 20261122,
+      "label": 1,
+      "feature": "rings",
+      "SMD": 0.006842372417802945
+    },
+    {
+      "replicate": 20261123,
+      "label": 0,
+      "feature": "sascore",
+      "SMD": -0.007213060491457097
+    },
+    {
+      "replicate": 20261123,
+      "label": 0,
+      "feature": "heavy_atoms",
+      "SMD": -0.007293199327025423
+    },
+    {
+      "replicate": 20261123,
+      "label": 0,
+      "feature": "mol_weight",
+      "SMD": -0.003907878075058898
+    },
+    {
+      "replicate": 20261123,
+      "label": 0,
+      "feature": "logp",
+      "SMD": 0.00255617364114984
+    },
+    {
+      "replicate": 20261123,
+      "label": 0,
+      "feature": "tpsa",
+      "SMD": 0.005791300938423567
+    },
+    {
+      "replicate": 20261123,
+      "label": 0,
+      "feature": "rotors",
+      "SMD": 0.0028541736080111937
+    },
+    {
+      "replicate": 20261123,
+      "label": 0,
+      "feature": "rings",
+      "SMD": -0.0007132986579593994
+    },
+    {
+      "replicate": 20261123,
+      "label": 1,
+      "feature": "sascore",
+      "SMD": -0.005342165909955574
+    },
+    {
+      "replicate": 20261123,
+      "label": 1,
+      "feature": "heavy_atoms",
+      "SMD": 0.006324349385553081
+    },
+    {
+      "replicate": 20261123,
+      "label": 1,
+      "feature": "mol_weight",
+      "SMD": -0.001963087825982752
+    },
+    {
+      "replicate": 20261123,
+      "label": 1,
+      "feature": "logp",
+      "SMD": 0.008860332787487928
+    },
+    {
+      "replicate": 20261123,
+      "label": 1,
+      "feature": "tpsa",
+      "SMD": 0.009560820490526221
+    },
+    {
+      "replicate": 20261123,
+      "label": 1,
+      "feature": "rotors",
+      "SMD": 0.010126704091040415
+    },
+    {
+      "replicate": 20261123,
+      "label": 1,
+      "feature": "rings",
+      "SMD": 0.005472989715878558
+    }
+  ],
+  "replicate_scaffold_diagnostics": [
+    {
+      "replicate": 20261121,
+      "scaffolds_per_arm": 8938,
+      "generated_novel_scaffold_fraction_vs_historical_arm": 0.909,
+      "generated_novel_scaffold_fraction_vs_reference_pool": 0.859,
+      "historical_normalized_scaffold_entropy": 0.9623893766545131,
+      "generative_replacement_normalized_scaffold_entropy": 0.9628347079149959
+    },
+    {
+      "replicate": 20261122,
+      "scaffolds_per_arm": 8868,
+      "generated_novel_scaffold_fraction_vs_historical_arm": 0.9021666666666667,
+      "generated_novel_scaffold_fraction_vs_reference_pool": 0.8538333333333333,
+      "historical_normalized_scaffold_entropy": 0.9609778853457647,
+      "generative_replacement_normalized_scaffold_entropy": 0.9614763357805999
+    },
+    {
+      "replicate": 20261123,
+      "scaffolds_per_arm": 8906,
+      "generated_novel_scaffold_fraction_vs_historical_arm": 0.9056666666666666,
+      "generated_novel_scaffold_fraction_vs_reference_pool": 0.8508333333333333,
+      "historical_normalized_scaffold_entropy": 0.9607603488404434,
+      "generative_replacement_normalized_scaffold_entropy": 0.961297209960753
+    }
+  ],
+  "scaffold_identities_matched": false,
+  "scaffold_richness_matched": true,
+  "exact_training_TS1_TS4_identity_overlaps": 0
+}

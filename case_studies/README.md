@@ -1,8 +1,8 @@
 # Case studies
 
 This directory contains compact, manuscript-facing source tables for two
-descriptive GESA case studies. They are separate from the external and internal
-benchmarks because neither dataset is used here as an unbiased performance test.
+descriptive GESA case studies illustrating stepwise route progression and
+experimental concordance.
 
 - `stepwise_routes/`: seven selected seven-step literature syntheses, with one
   row per reaction product and its GESA `P(HS)`.

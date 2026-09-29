@@ -1,6 +1,6 @@
 # Internal model comparison
 
-The paper-facing comparison is fixed to:
+The benchmark comparison includes:
 
 **Standard GNN Backbones:** GCN, GAT, GINE, AttentiveFP  
 **GESA Framework:** Task-GAT, Reaction-GINE, GESA-Core, GESA

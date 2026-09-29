@@ -1,0 +1,30 @@
+seed: 123
+output: runs/pretraining/taskgat/seed_{seed}
+data:
+  train: training_data/legacy_sa/train.csv
+  validation: training_data/legacy_sa/validation.csv
+  cache_dir: runs/molecular_cache
+model:
+  hidden_dim: 256
+  num_layers: 5
+  gat_heads: 4
+  dropout: 0.1
+  head_hidden_dim: 128
+  head_dropout: 0.2
+training:
+  batch_size: 256
+  evaluation_batch_size: 512
+  loader_workers: 1
+  shard_size: 4096
+  interleave_shards: 16
+  encoder_learning_rate: 0.0003
+  head_learning_rate: 0.001
+  weight_decay: 0.00001
+  max_epochs: 50
+  patience: 10
+  min_delta_auroc: 0.0001
+  scheduler_factor: 0.5
+  scheduler_patience: 3
+  minimum_learning_rate: 0.000001
+  gradient_clip_norm: 5.0
+  amp: true

@@ -102,11 +102,14 @@ class GESA(nn.Module):
     def load_release_checkpoint(
         self, checkpoint: str | Path, map_location: str | torch.device = "cpu"
     ) -> Dict[str, Any]:
-        payload = torch.load(Path(checkpoint), map_location=map_location)
+        payload = torch.load(Path(checkpoint), map_location=map_location, weights_only=False)
         state = payload.get("model_state_dict", payload)
         incompatible = self.load_state_dict(state, strict=True)
         if incompatible.missing_keys or incompatible.unexpected_keys:
             raise RuntimeError("GESA checkpoint strict load was not exact")
+        scaler = payload.get('sa_prior_scaler')
+        self.sa_prior_mean = scaler['mean'] if scaler else None
+        self.sa_prior_std = scaler['std'] if scaler else None
         return payload
 
     def describe(self) -> Dict[str, Any]:

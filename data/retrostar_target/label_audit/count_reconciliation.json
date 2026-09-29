@@ -1,0 +1,10 @@
+{
+  "before_single_component_cleanup": 587021,
+  "current_single_component": 582227,
+  "removed_multicomponent": 4794,
+  "explicit_generated_source_planning_records": 432386,
+  "historical_GASA_labels_only": 149841,
+  "count_difference_587021_minus_432386": 154635,
+  "complete_routes_above_10_steps": 1161,
+  "note": "Historical GASA ES/HS labels are retained as published."
+}

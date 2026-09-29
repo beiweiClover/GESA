@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "packaging_rdkit": "2025.03.6",
+  "evaluated_n": 2252,
+  "all_scored_n": 2254,
+  "raw_sdf_records": 2431,
+  "checks": [
+    {
+      "generator": "NEAT-POCKET",
+      "scores_verified": 837,
+      "structures_verified": 837,
+      "evaluated_sdf_written": 835,
+      "metric_rows_verified": 54,
+      "canonical_serialization_differences": 0
+    },
+    {
+      "generator": "FLOWR",
+      "scores_verified": 945,
+      "structures_verified": 945,
+      "evaluated_sdf_written": 945,
+      "metric_rows_verified": 54,
+      "canonical_serialization_differences": 0
+    },
+    {
+      "generator": "ResGen",
+      "scores_verified": 472,
+      "structures_verified": 472,
+      "evaluated_sdf_written": 472,
+      "metric_rows_verified": 54,
+      "canonical_serialization_differences": 0
+    }
+  ],
+  "serialized_evaluation_sdf_rechecked": 2252
+}

@@ -1,0 +1,541 @@
+{
+  "checked_unix": 1795083064.7319834,
+  "n": 89,
+  "all_match": true,
+  "records": [
+    {
+      "path": "evaluate_all_model_sa.py",
+      "bytes": 17419,
+      "sha256": "fa9255f1e5c2da5826afb430b238c484fe588565e02d377fae8536bdbb17c1ea",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/common.py",
+      "bytes": 2852,
+      "sha256": "c2c0ef49674b8b3d1f11477b9314f02b5039ae2cd4e57601c9c472e13581cdd5",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/run_sascore.py",
+      "bytes": 1107,
+      "sha256": "198debed5c4f17676ffd7369e59f0fcd0a1b8d4ecf6b1b995c13986e7af2156d",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/run_scscore.py",
+      "bytes": 1339,
+      "sha256": "f2a08a3377d29cf8206ce3c69288e2a5391b40a3169e2dd1fe19c83152125ed9",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/run_syba.py",
+      "bytes": 1007,
+      "sha256": "9fb0d344161491edc2cb34c9432a150c9c472451bf5ae927b6c64632ca041023",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/run_brsascore.py",
+      "bytes": 1334,
+      "sha256": "333be50b46f5eed228a6741de6504238f33924fb9181a529126f30db56e72b73",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/run_rascore_xgb.py",
+      "bytes": 1018,
+      "sha256": "82febdd9646aa52ad8be946ca9e1371181048d615c48f1f7ef6204333bda8484",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/run_gasa.py",
+      "bytes": 2030,
+      "sha256": "b4b80840a274e097d8fb3d611d5edf42e9844199d53a738ca7c94f69386b3c1f",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/run_synfrag.py",
+      "bytes": 2507,
+      "sha256": "797944cdc74f17dc07aa2e89dfb80a4325fa41fb48642c04c2ddbf4c80e2767a",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/run_deepsa.py",
+      "bytes": 1935,
+      "sha256": "22d16d35abb411cac1b26486ed25465622af813af733197b18295c539ffaf9ab",
+      "matches_reference": true
+    },
+    {
+      "path": "adapters/run_retroscore.py",
+      "bytes": 4249,
+      "sha256": "24606ff9b228ec0350348cf51c7283c0fcde29eb8b4f2c0fdc5814c9824453ff",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/attentive_pool.py",
+      "bytes": 933,
+      "sha256": "ad4dbb43a80b1009f10d00525da62969eb2fb910e22135acde2682667eb2677c",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/features.py",
+      "bytes": 1856,
+      "sha256": "1fabbf72ba484d5bf88f1f6a9efe52b9da1682b942b888837bb531bafef27642",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/graph.py",
+      "bytes": 2480,
+      "sha256": "6c77d3533e5e9d3720d2f9be1ea289f6661060cab2f7a6dca121d274496c25a5",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/inference.py",
+      "bytes": 2209,
+      "sha256": "d1b42647935111ab3629fc593a15dcb18dcb51a77de724b5677946920405cad0",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/model.py",
+      "bytes": 5546,
+      "sha256": "e6e410b29b38e077783fc6eb81caaf018b94e73790a485cdc383269256cc65c8",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/reaction_encoder.py",
+      "bytes": 3147,
+      "sha256": "0c08346b56bb4353e8160612cadce71b0c4d76f5d8c21551453eaa0d0d5ebb25",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/sa_priors.py",
+      "bytes": 4656,
+      "sha256": "68f9a3d7ad763db9a214e40bfda69bd0214c4c2a39787a03cde08c7c738d41a5",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/source_gate.py",
+      "bytes": 942,
+      "sha256": "219b2acd5ec588b4523f448ee422cc9662b2af520d8fe366ab7124c264457c96",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/task_encoder.py",
+      "bytes": 2442,
+      "sha256": "2fcc81626158f3e4443dc442577f85d7b4f2f6eb56778debbf10882cb9963a15",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/src/gesa/__init__.py",
+      "bytes": 174,
+      "sha256": "0cf70f60d258dc5a9aafed903e221f1484c7933705ad34e0f5ec55dbed9483f4",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/scripts/predict.py",
+      "bytes": 1512,
+      "sha256": "83b588587924cce67f66654300a3bae41973210f8ca30a3df26e83f70d9706f2",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/task_1_codex_three_partition_production/run_retro_partition.py",
+      "bytes": 38545,
+      "sha256": "d9c275f93508e9f54bc644b67184f9422a47eadbaa9dba9c5f0c2d9461fd1b37",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/train.py",
+      "bytes": 1419,
+      "sha256": "7a49b3789bc99346683a84eef9616017f9d5ebe7139c0058a684cae092337c84",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/api.py",
+      "bytes": 3250,
+      "sha256": "07a4cf6cf0fa51503de8d4be34e073d321b7b8abd9fb1e6eaa077782c08e8d52",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/retro_plan.py",
+      "bytes": 3173,
+      "sha256": "950a2029b8e1c2a8b33594ceee4a2857ccf67337d4356c4210092567ff5db012",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/alg/molstar.py",
+      "bytes": 2882,
+      "sha256": "39fc956f8ff3cc247d7644732b7499de5c9b821c9b5f9ed75caf9f2fa90796fd",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/alg/reaction_node.py",
+      "bytes": 2438,
+      "sha256": "eee0ba0d608c3b9328e7fa8e04994bb1c6072d112c911cb2bf62d161d810d50b",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/alg/mol_node.py",
+      "bytes": 3082,
+      "sha256": "0ea6cbec011bf1cd13a70651b3b8455da1731859524b085a9b98c8df3e2ceafd",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/alg/mol_tree.py",
+      "bytes": 5403,
+      "sha256": "dbacc1c5a6f42853c6c35008ed9319f19348a02d3e7835a436e05a61d93c9bc4",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/alg/syn_route.py",
+      "bytes": 2882,
+      "sha256": "2050ad29e8ec463610d53797c3903a306eb3d680a88a381fe33ca43ff0a2fd74",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/alg/__init__.py",
+      "bytes": 42,
+      "sha256": "74304e6107bb828b7e652597c629f2fb5d622d14fd1e996c2e477eb50cf925b1",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/data_loader/__init__.py",
+      "bytes": 68,
+      "sha256": "4f84a4957509c388ec359a9925a9ae9ed791f114b6d65ae4bf70cd97669edc26",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/data_loader/value_data_loader.py",
+      "bytes": 2887,
+      "sha256": "f94eb4f38844fd35ab62ab2bb0e3792e26b923e43a95911fe4388bb869538641",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/trainer/__init__.py",
+      "bytes": 46,
+      "sha256": "765d9504346c4de480e432730fa67e1b93805cd4b704beb0dd4e3bfcbcad602c",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/trainer/trainer.py",
+      "bytes": 3338,
+      "sha256": "f063a409b2ea86f2f5f38ff6ed4e92f6f6ffe8b7c0de6929b444696d5daecd27",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/model/value_mlp.py",
+      "bytes": 1306,
+      "sha256": "8eb6c065d29718c2dafcac12155c67c3933ce6c5feb23024a44958339091e9bd",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/model/__init__.py",
+      "bytes": 48,
+      "sha256": "c812e05fcfbad50cd59e182948d3bd2d8a2fdc1abe5e91a458fb4fd0124c9ac9",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/utils/logger.py",
+      "bytes": 845,
+      "sha256": "8b1d023282d7311636d926b86d85db03cf794cb954e8f2fd46e492991a43bcd3",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/utils/__init__.py",
+      "bytes": 33,
+      "sha256": "094b5f067b9b04e3af07938220e1e971a6125821d66dfb4a23e95d6450f29ad4",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/common/parse_args.py",
+      "bytes": 2262,
+      "sha256": "5fa9385f35877870b6b8263de96505861299b20e6cd3a8873b5a30e9374c9c91",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/common/prepare_utils.py",
+      "bytes": 1303,
+      "sha256": "4fcf2f792ed959e7ce6909158b94b45dbb7cdf3f4223ee6306d90810e6eb2a50",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/common/smiles_to_fp.py",
+      "bytes": 610,
+      "sha256": "b4bf051c13518de19dddb15a334a4413aee241419b622de8db6c277c5c87d9e9",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/common/__init__.py",
+      "bytes": 167,
+      "sha256": "c0d43f1e07b1b68c4e95573499f141c42a80a8fb3e3a572df230b0dde0b1b452",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/mlp_retrosyn/setup.py",
+      "bytes": 182,
+      "sha256": "f4f3b99479d456bcc6bf11059b13bae944e7dd7d9c249fc8f7daecdca1e161bd",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/setup.py",
+      "bytes": 185,
+      "sha256": "b60d58e1cf5697905b9cb506c3c207ce95a19bb37b06c84938c539fdcc1a3c01",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/mlp_retrosyn/mlp_retrosyn/mlp_inference.py",
+      "bytes": 4318,
+      "sha256": "7ab799735f983f593ef06838cfa5f3b2e836693128fef110134d95af9baf8f5e",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/mlp_retrosyn/mlp_retrosyn/mlp_policies.py",
+      "bytes": 14193,
+      "sha256": "367bd22b769f4737496a92ff8eb841fa845cdd9f90b6239392d6e1db6b4e801c",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/mlp_retrosyn/mlp_retrosyn/extract_template.py",
+      "bytes": 1880,
+      "sha256": "440683cf599700c58f937c6a57904673f3b2ef8e53c2d7af94856a05e5b39a15",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/mlp_retrosyn/mlp_retrosyn/mlp_train.py",
+      "bytes": 2241,
+      "sha256": "a9142833191c6e427df28480fc0c876b9d6de9fc206311be7204802e238a304a",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/mlp_retrosyn/mlp_retrosyn/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/bonds.py",
+      "bytes": 20187,
+      "sha256": "af59a04547b77d3068d607dd2ab5df305788f1cfe1b508a12e48e514a6af4eb6",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/main.py",
+      "bytes": 28126,
+      "sha256": "4bac76091c249be6d76ae50a656cde52aad98350dec0fede4ada8f7b36f71951",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/chiral.py",
+      "bytes": 5820,
+      "sha256": "e72f938d3857f661b7333870f0dbdb8dfb0ce3957006814f096159003e30b387",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/clean.py",
+      "bytes": 3956,
+      "sha256": "61d7a4d0556accaadc5c57d01b0398f7d3e6708f7b36664cc13940da297ecda3",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/initialization.py",
+      "bytes": 7338,
+      "sha256": "04dbc0b14881659c648fbb035870fa0617b4f077c06fdba42c87fc6a9c906846",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/template_extractor.py",
+      "bytes": 37342,
+      "sha256": "31a662ba6e215eeb0213d53891a352ff8e810b6db9e7af50f5cfac13c0e979fb",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/utils.py",
+      "bytes": 4230,
+      "sha256": "44da7ce580b7c2b10be056139af82c1e831cb4b3ee7d1c7efd620d4d82e8eff8",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/__init__.py",
+      "bytes": 81,
+      "sha256": "ebe1d2aede4379f4c28b3b8a2c02a70d614144ed911be71050face0266018fac",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/templates/clean_and_extract_uspto.py",
+      "bytes": 2041,
+      "sha256": "78f15203f315cbb7892e23d6872df2c40244b66707835ee77b482055dec1ca36",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/test/test_rdchiral.py",
+      "bytes": 1178,
+      "sha256": "b200b3f5fefb5c7a68ccdb985e43189a0866dde57021a21b67b32eb651e2c180",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/backup/chiral.py",
+      "bytes": 5820,
+      "sha256": "e72f938d3857f661b7333870f0dbdb8dfb0ce3957006814f096159003e30b387",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/backup/main.py",
+      "bytes": 28451,
+      "sha256": "49d108d01fc9c082bf0b49f0c4cee00d80a17682d77effe918bd538e553f6b3e",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/backup/utils.py",
+      "bytes": 4230,
+      "sha256": "44da7ce580b7c2b10be056139af82c1e831cb4b3ee7d1c7efd620d4d82e8eff8",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/backup/__init__.py",
+      "bytes": 81,
+      "sha256": "ebe1d2aede4379f4c28b3b8a2c02a70d614144ed911be71050face0266018fac",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/backup/clean.py",
+      "bytes": 3956,
+      "sha256": "61d7a4d0556accaadc5c57d01b0398f7d3e6708f7b36664cc13940da297ecda3",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/backup/template_extractor.py",
+      "bytes": 37342,
+      "sha256": "31a662ba6e215eeb0213d53891a352ff8e810b6db9e7af50f5cfac13c0e979fb",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/backup/bonds.py",
+      "bytes": 20187,
+      "sha256": "af59a04547b77d3068d607dd2ab5df305788f1cfe1b508a12e48e514a6af4eb6",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/backup/initialization.py",
+      "bytes": 7332,
+      "sha256": "958d87d2db60dbd6c9f90c217d2387909211084eedc5302227ad9af2d5878241",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/old/chiral.py",
+      "bytes": 5304,
+      "sha256": "e60a89074ba0545c27a99046f3a19c15a6f77a0ec9da04dc8db34ba8d11bb965",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/old/clean.py",
+      "bytes": 3836,
+      "sha256": "d05f20453947c417ce6039b5e28dc05b403742e0fcd6e04abc342fdaa274eb62",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/old/initialization.py",
+      "bytes": 4610,
+      "sha256": "f406ba92064832da2dec2020eed568240b268185f67e5c993fda6e03c6c6fc5d",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/old/main.py",
+      "bytes": 15264,
+      "sha256": "9bf50f5b0b9d3ae3e6fbace1c429511917f83abbf80f1cdf808d4f80b209ea60",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/old/__init__.py",
+      "bytes": 81,
+      "sha256": "ebe1d2aede4379f4c28b3b8a2c02a70d614144ed911be71050face0266018fac",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/old/template_extractor.py",
+      "bytes": 40436,
+      "sha256": "6be3007744b58200959a66205599c237b50a153a0c84dac1edc53d9bdbae8e59",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/old/utils.py",
+      "bytes": 2786,
+      "sha256": "c4fe3a424d0db1964169c2f0b72617167375bbab8bcb026eeacb3fc4893a9d4f",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_star/packages/rdchiral/rdchiral/test/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_reference": true
+    },
+    {
+      "path": "SynFrag/model/synfrag.py",
+      "bytes": 13103,
+      "sha256": "795248d3fba742353e5f58701df6afffcde874a14b594306a20bd49023b93af2",
+      "matches_reference": true
+    },
+    {
+      "path": "GASA/gasa.py",
+      "bytes": 7141,
+      "sha256": "0332c7afe38468664e8589cb516e909c5efd625f6341e355ffe07cd62b42e70c",
+      "matches_reference": true
+    },
+    {
+      "path": "DeepSA/DeepSA_predict.py",
+      "bytes": 3347,
+      "sha256": "5809df48e2d444a8b1d48039622c0f19bd5cde2e0119f259c7f20d28ef17fd4d",
+      "matches_reference": true
+    },
+    {
+      "path": "GESA/weights/GESA.pt",
+      "bytes": 9669263,
+      "sha256": "79361f54e122f87dcb94f4c409f6c0de337fa2141b3bdc095994fe0c13e7997b",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_data/dataset/origin_dict.csv",
+      "bytes": 1292471932,
+      "sha256": "92b490c76e741212c82e177b22a89687aab0e53c4c78772aed333e540d0e38d8",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_data/one_step_model/template_rules_1.dat",
+      "bytes": 88916403,
+      "sha256": "1981c26fed5eaffc5a7b21f299986c74cbdb7891d3410f954f9685089037d59c",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_data/one_step_model/saved_rollout_state_1_2048.ckpt",
+      "bytes": 786637894,
+      "sha256": "25a92c7c902ecec1c16a8229febe211cba063086c1399728b8cb2bcc031f3a46",
+      "matches_reference": true
+    },
+    {
+      "path": "retro_star/retro_data/saved_models/best_epoch_final_4.pt",
+      "bytes": 1050492,
+      "sha256": "90b9dbf7fafa0650f309018b97bc09cb086826ee247acb3ce4b2b90927d7824c",
+      "matches_reference": true
+    },
+    {
+      "path": "GASA/model/gasa.pth",
+      "bytes": 1592442,
+      "sha256": "7b6dcff15afc787d7a5b78befb5eae487c885819c048c206f0d9e42b5391d4bb",
+      "matches_reference": true
+    },
+    {
+      "path": "SynFrag/checkpoints/synfrag_default.pth",
+      "bytes": 12760155,
+      "sha256": "b199767d33d30dd9314c2a06de35786f29b3b230ca84d3043a830da854b96eba",
+      "matches_reference": true
+    },
+    {
+      "path": "scscore/models/full_reaxys_model_1024bool/model.ckpt-10654.as_numpy.json.gz",
+      "bytes": 6178760,
+      "sha256": "fa90bd552307b2efd05eb1e53033bc9eadadfd5bdca682e541040982af99536b",
+      "matches_reference": true
+    }
+  ]
+}

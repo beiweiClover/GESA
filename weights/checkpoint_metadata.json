@@ -1,0 +1,32 @@
+[
+  {
+    "name": "GESA",
+    "logical_id": "GESA-trial011-seed123-epoch38",
+    "path": "weights/GESA.pt",
+    "sha256": "79361f54e122f87dcb94f4c409f6c0de337fa2141b3bdc095994fe0c13e7997b",
+    "bytes": 9669263,
+    "seed": 123,
+    "epoch": 38,
+    "selection": "internal validation AUROC"
+  },
+  {
+    "name": "Task-GAT",
+    "logical_id": "TaskGAT-seed123-epoch2",
+    "path": "weights/pretrained/TaskGAT_seed123.pt",
+    "sha256": "3f4e78fba57d730d10a51ab660a7114f2c3686ff843d0c7b3dca2a9846e01961",
+    "bytes": 2847564,
+    "seed": 123,
+    "epoch": 2,
+    "selection": "legacy validation AUROC"
+  },
+  {
+    "name": "Reaction-GINE",
+    "logical_id": "ReactionGINE-seed42-epoch23",
+    "path": "weights/pretrained/ReactionGINE_epoch23.pt",
+    "sha256": "1f1692b0e7b2b11f87757c9e93e1066ec8414685f74460b461cef9e10a160ac0",
+    "bytes": 5463564,
+    "seed": 42,
+    "epoch": 23,
+    "selection": "minimum ORD validation total loss"
+  }
+]

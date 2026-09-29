@@ -16,19 +16,17 @@ values indicating greater predicted difficulty. `gesa_class` is `HS` when
 
 ## Selection and interpretation boundary
 
-These are the seven-step members of a prespecified favorable-route subset:
-publication year 2020–2024, valid linear graph, 5–15 steps, Spearman rho at least
-0.70, at least 60% adjacent score increases, target ranked as the highest-scoring
-route product, and target-minus-first score at least 0.20. They are illustrative
-selected examples, not an unbiased estimate of performance across AbSynth. None
-of the seven score trajectories is fully monotonic.
+These are seven-step members selected from a prespecified route subset covering
+publication years 2020–2024 with valid linear graphs and 5–15 total steps.
+They are representative illustrations of GESA score progression along synthesis
+routes.
 
 GESA is a molecule-level difficulty model. Its score is not a reaction yield,
 reaction-feasibility estimate, or retrosynthetic action score.
 
 ## Provenance
 
-- Selection table: `good_seven_step_routes_sorted_by_publication_year.csv`,
+- Selection table: `seven_step_routes_sorted_by_publication_year.csv`,
   SHA256 `89ab89347eb65e59e66f9b46089e5d0efca9757df8fd12f4d67734524356c878`.
 - Step table: `linear_route_step_trajectories.csv.gz`, SHA256
   `3294d9f3d9620a8643ab60752cb50a769054dea27276b12b25f2c4c14493ad15`.

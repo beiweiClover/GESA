@@ -1,0 +1,24 @@
+{
+  "NEAT-POCKET": {
+    "paper": "https://arxiv.org/abs/2609.05097",
+    "status": "preprint",
+    "repository": "https://github.com/molinfo-vienna/NEAT-POCKET",
+    "commit": "7414f83c6ead18b57120394972dc00ddef7bb0c8",
+    "weight_sha256": "e34c59a0b342d2d0abed9f0435c8594fb0ff06df5e4355ce82bf162d6752bd7a",
+    "bond_predictor_sha256": "9d3337f284cbd377ba11d08c86b97b44cb1beef70a90ca0e843fb13d85a84a94"
+  },
+  "FLOWR": {
+    "paper": "https://doi.org/10.1038/s43588-026-00998-8",
+    "status": "journal article",
+    "repository": "https://github.com/jule-c/flowr",
+    "commit": "bbb8bfb4e8d8dd16bff1d56a7f96246920e643ba",
+    "weight_sha256": "1e26e06181fa0d6850a159a12acac36847853f979f76b8fdaa148ed3b502a077"
+  },
+  "ResGen": {
+    "paper": "https://doi.org/10.1038/s42256-023-00712-7",
+    "status": "journal article",
+    "repository": "https://github.com/OdinZhang/ResGen",
+    "commit": "2db3defa69c8cd45f6e85966ca75b1e4b6cd5a3e",
+    "weight_sha256": "45cac2f5186564e71b43fe43ce709ae2515a3a32847ef592d6f99810d32916df"
+  }
+}

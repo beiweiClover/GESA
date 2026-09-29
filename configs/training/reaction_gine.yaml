@@ -1,0 +1,28 @@
+seed: 42
+data_dir: training_data/GESA_Data/ord
+output_dir: runs/pretraining/reaction_gine
+device: auto
+batch_size: 256
+num_workers: 8
+persistent_workers: false
+shuffle_buffer: 4096
+initial_epochs: 10
+epochs: 30
+max_train_steps: null
+max_valid_steps: null
+learning_rate: 0.0005
+minimum_learning_rate: 0.00001
+warmup_ratio: 0.05
+weight_decay: 0.00001
+grad_clip: 5.0
+amp: true
+lambda_relation: 0.5
+log_every_steps: 250
+save_each_epoch: false
+model:
+  hidden_dim: 256
+  num_layers: 5
+  dropout: 0.1
+  projection_dim: 128
+  temperature: 0.1
+  reactant_pool: atom_mean

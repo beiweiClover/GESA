@@ -3,6 +3,9 @@ metadata:
   full_name: Generative-space Expanded Synthetic Accessibility
   public_checkpoint_seed: 123
 
+seed: 123
+initialization: checkpoint
+
 architecture:
   hidden_dim: 256
   num_layers: 5
@@ -54,4 +57,4 @@ data:
   validation: null
   smiles_column: canonical_smiles
   label_column: target_hard
-  note: Set train and validation paths before training; large source datasets are not bundled.
+  note: Set train and validation paths to the CSV files extracted from the Zenodo training-data archive.

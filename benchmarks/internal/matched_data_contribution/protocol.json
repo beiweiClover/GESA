@@ -1,0 +1,134 @@
+{
+  "experiment": "matched_historical_vs_generative_replacement",
+  "sampling_seeds": [
+    20261121,
+    20261122,
+    20261123
+  ],
+  "training_seed": 123,
+  "N_per_arm": 12000,
+  "ES_per_arm": 6000,
+  "HS_per_arm": 6000,
+  "shared_historical_fraction": 0.5,
+  "generative_fraction_in_mixed_arm": 0.5,
+  "matching_features": [
+    "sascore",
+    "heavy_atoms",
+    "mol_weight",
+    "logp",
+    "tpsa",
+    "rotors",
+    "rings"
+  ],
+  "absolute_pairwise_calipers": {
+    "sascore": 0.15,
+    "heavy_atoms": 2.0,
+    "mol_weight": 40.0,
+    "logp": 0.75,
+    "tpsa": 20.0,
+    "rotors": 2.0,
+    "rings": 1.0
+  },
+  "neighbors_per_generated_candidate": 64,
+  "greedy_without_replacement": true,
+  "replacement_scaffold_cap_per_domain": 3,
+  "scaffold_count_exactly_matched": true,
+  "test_nearest_neighbor_similarity_matched": false,
+  "identity": "RDKit single-component canonical isomeric SMILES with atom-map numbers removed",
+  "scaffold": "non-chiral map-free Bemis-Murcko; acyclic molecules use their non-chiral whole-structure key",
+  "source_training_split": {
+    "version": "released single-component target training split",
+    "sha256": "32b154d0f13e83b0543e924fc10e49835a1b3343eef742ed30de39e6de8c3826",
+    "historical_reference_molecules": 119880
+  },
+  "sample_size_selection": "Training-only common property support followed by scaffold-richness refinement; fixed before model evaluation.",
+  "training_settings": {
+    "batch_size": 256,
+    "evaluation_batch_size": 512,
+    "encoder_lr": 2e-05,
+    "head_lr": 0.0003,
+    "weight_decay": 1e-05,
+    "max_epochs": 40,
+    "warmup_epochs": 5,
+    "patience": 10,
+    "min_delta": 0.0001,
+    "train_seed": 123,
+    "amp": true,
+    "external_metrics_consulted": false,
+    "optimizer": "AdamW",
+    "loss": "BCEWithLogitsLoss",
+    "positive_class_weight": 1.0,
+    "gradient_clip_norm": 5.0,
+    "min_delta_validation_AUROC": 0.0001,
+    "scheduler": {
+      "name": "ReduceLROnPlateau",
+      "mode": "max",
+      "factor": 0.5,
+      "patience": 3,
+      "min_lr": 1e-06
+    },
+    "loader_workers": 0,
+    "evaluation_precision": "FP32; TF32 disabled",
+    "SA_prior_standardization": "mean/std fitted separately on each training arm; ddof=0; std<1e-12 replaced by1"
+  },
+  "pretrained_encoders": {
+    "Task-GAT_seed123_sha256": "3f4e78fba57d730d10a51ab660a7114f2c3686ff843d0c7b3dca2a9846e01961",
+    "Reaction-GINE_epoch23_sha256": "1f1692b0e7b2b11f87757c9e93e1066ec8414685f74460b461cef9e10a160ac0"
+  },
+  "runs": [
+    {
+      "replicate": 20261121,
+      "arm": "historical_plus_generative",
+      "best_epoch": 7,
+      "validation_AUROC": 0.9486975700439936,
+      "initial_state_sha256": "b1bfa9309335df9260c78c86762827392ca471fa6efc2c02f703530c0bdc3aa8",
+      "checkpoint_sha256": "ac0fd7eb867020e89a4cce0510b66d7897677f704ac56e1df0b4066753375524"
+    },
+    {
+      "replicate": 20261121,
+      "arm": "historical_only",
+      "best_epoch": 14,
+      "validation_AUROC": 0.9356891080991172,
+      "initial_state_sha256": "b1bfa9309335df9260c78c86762827392ca471fa6efc2c02f703530c0bdc3aa8",
+      "checkpoint_sha256": "6a1a3a0560f3b8b87f5d5164c66af942c28dc8e6de78acf2379707ac585200d4"
+    },
+    {
+      "replicate": 20261122,
+      "arm": "historical_plus_generative",
+      "best_epoch": 10,
+      "validation_AUROC": 0.9510218848283248,
+      "initial_state_sha256": "b1bfa9309335df9260c78c86762827392ca471fa6efc2c02f703530c0bdc3aa8",
+      "checkpoint_sha256": "4c75ad91d1f601401f2ef4d1a6ae7a8eef8f600fc154afe6b4794a941698bba4"
+    },
+    {
+      "replicate": 20261122,
+      "arm": "historical_only",
+      "best_epoch": 10,
+      "validation_AUROC": 0.9380273256019696,
+      "initial_state_sha256": "b1bfa9309335df9260c78c86762827392ca471fa6efc2c02f703530c0bdc3aa8",
+      "checkpoint_sha256": "8ac8fb5a33101e44cf99d2bb6fe75833313fa6cc4fda59164e442e97db818df0"
+    },
+    {
+      "replicate": 20261123,
+      "arm": "historical_plus_generative",
+      "best_epoch": 10,
+      "validation_AUROC": 0.9504563800858792,
+      "initial_state_sha256": "b1bfa9309335df9260c78c86762827392ca471fa6efc2c02f703530c0bdc3aa8",
+      "checkpoint_sha256": "426fadc5420a58add748cdf5b4a079f35963736766299b0d6b0758f2bb2657c7"
+    },
+    {
+      "replicate": 20261123,
+      "arm": "historical_only",
+      "best_epoch": 11,
+      "validation_AUROC": 0.9394140254432198,
+      "initial_state_sha256": "b1bfa9309335df9260c78c86762827392ca471fa6efc2c02f703530c0bdc3aa8",
+      "checkpoint_sha256": "81cd626d5fb1f40cc880fcadd68a31a46942dc6885bcf0615ac2f2ae818e68fe"
+    }
+  ],
+  "uncertainty": {
+    "training_subset_variability": "mean and sample SD across 3 independent data samplings; training seed fixed",
+    "test_cohort_uncertainty": "2000 paired class-stratified percentile bootstrap draws per fitted pair",
+    "analysis_seed": 20261124,
+    "equal_proximity_abs_nn_difference": 0.02
+  }
+}

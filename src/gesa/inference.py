@@ -54,7 +54,10 @@ def predict_smiles(
     for start in range(0, len(valid), int(batch_size)):
         rows = valid[start:start + int(batch_size)]
         graphs = [smiles_to_graph(value) for _, value, _ in rows]
-        priors = standardized_sa_priors([molecule for _, _, molecule in rows], score_path)
+        priors = standardized_sa_priors(
+            [molecule for _, _, molecule in rows], score_path,
+            mean=getattr(model, 'sa_prior_mean', None), std=getattr(model, 'sa_prior_std', None),
+        )
         batch = move_batch(collate_graphs(graphs, priors), device)
         probabilities = torch.sigmoid(model(batch)).detach().float().cpu().numpy()
         for (index, _, _), probability in zip(rows, probabilities):

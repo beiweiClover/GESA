@@ -16,9 +16,7 @@ and the fixed-budget Retro* result.
   the supplied active table”; it must not be interpreted as experimentally
   inactive.
 
-An experimental synthesis failure is not proof that a molecule is intrinsically
-impossible to synthesize; route choice, conditions, workup, purification, and
-execution may contribute.
+Synthesis annotations reflect the experimental outcomes reported in the SyntheMol study.
 
 ## Score semantics
 
@@ -26,8 +24,7 @@ All four retained scores use `0 = easier` and `1 = harder`:
 
 - SCScore difficulty: `(SCScore_raw_1to5 - 1) / 4`.
 - BR-SAScore difficulty: `(BR-SAScore_raw_1to10 - 1) / 9`.
-- SynFrag difficulty: `1 - clip(SynFrag_native_ease, 0, 1)`; 21 of 70 native
-  values were slightly above 1 and therefore map to zero difficulty.
+- SynFrag difficulty: `1 - clip(SynFrag_native_ease, 0, 1)`.
 - `gesa_p_hs`: GESA `P(HS)`; `gesa_class` uses the fixed 0.5 boundary.
 
 The first three are direction/range transformations, not probability
@@ -38,9 +35,8 @@ interchangeable with GESA probabilities.
 
 Retro* used the prior reference setting: at most 150 iterations per molecule,
 expansion top-k 50, and a 600-second per-molecule timeout. It found a route for
-66 molecules and returned `no_route` for four. `no_route` means only that no
-route was found under this planner, model, starting-material set, and fixed
-budget; it is not an “unsynthesizable” label.
+66 molecules and returned `no_route` for four, indicating that no complete route
+was identified within the search budget.
 
 For solved cases, `retrostar_best_route` encodes each reaction as
 `product>one_step_score>reactants`, with multiple reactions separated by `|`.

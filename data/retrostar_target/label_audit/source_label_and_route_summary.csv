@@ -1,0 +1,8 @@
+source_combination,N,ES,HS,complete_route_with_exact_steps,complete_route_gt10,completed_no_route,route_steps_min,route_steps_median,route_steps_p90,route_steps_max
+GASA_RetroStar,149841,49928,99913,0,,,,,,
+GASA_RetroStar;MolGenBench,7,1,6,1,0.0,6.0,2.0,2.0,2.0,2.0
+GASA_RetroStar;MolGenBench;TarPass,6,3,3,3,0.0,3.0,1.0,1.0,5.800000000000001,7.0
+GASA_RetroStar;TarPass,61,47,14,47,0.0,14.0,0.0,1.0,4.399999999999999,9.0
+MolGenBench,169011,27513,141498,27841,328.0,141170.0,1.0,3.0,7.0,18.0
+MolGenBench;TarPass,603,342,261,343,1.0,260.0,1.0,1.0,4.0,12.0
+TarPass,262698,101552,161146,102384,832.0,160314.0,0.0,3.0,7.0,17.0

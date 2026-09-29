@@ -1,0 +1,183 @@
+{
+  "format": "gesa-training-settings-audit-v1",
+  "label": {
+    "ES": 0,
+    "HS": 1,
+    "positive_class": "HS"
+  },
+  "Task-GAT": {
+    "architecture": {
+      "implementation": "torch_geometric.nn.GATConv",
+      "hidden_dim": 256,
+      "num_layers": 5,
+      "heads": 4,
+      "edge_index_used": true,
+      "edge_attr_used": true,
+      "residual": true,
+      "normalization": "LayerNorm",
+      "activation": "GELU"
+    },
+    "training": {
+      "batch_size": 256,
+      "evaluation_batch_size": 512,
+      "loader_workers": 1,
+      "learning_rate": 0.0003,
+      "head_learning_rate": 0.001,
+      "weight_decay": 1e-05,
+      "max_epochs": 50,
+      "patience": 10,
+      "min_delta_auc": 0.0001,
+      "scheduler_factor": 0.5,
+      "scheduler_patience": 3,
+      "minimum_learning_rate": 1e-06,
+      "gradient_clip_norm": 5.0,
+      "amp": true
+    },
+    "optimizer": "AdamW",
+    "loss": "BCEWithLogitsLoss, reduction=mean",
+    "positive_weight_formula": "N_ES / N_HS in the actual training split",
+    "positive_weight": 1.1665583333333334,
+    "training_counts": {
+      "total": 519974,
+      "ES": 279974,
+      "HS": 240000
+    },
+    "validation_counts": {
+      "total": 64994,
+      "ES": 34994,
+      "HS": 30000
+    },
+    "test_counts": {
+      "total": 65000,
+      "ES": 35000,
+      "HS": 30000
+    },
+    "training_seeds": [
+      42,
+      123,
+      2026
+    ],
+    "per_seed": {
+      "42": {
+        "selected_epoch": 1,
+        "completed_epochs": 11,
+        "validation_auroc": 0.9999333209502582
+      },
+      "123": {
+        "selected_epoch": 2,
+        "completed_epochs": 12,
+        "validation_auroc": 0.9999671691337563
+      },
+      "2026": {
+        "selected_epoch": 1,
+        "completed_epochs": 11,
+        "validation_auroc": 0.9999247228096244
+      }
+    },
+    "selection": "validation AUROC with minimum improvement 0.0001 and patience 10",
+    "data_membership": "Zenodo legacy_sa_650k.csv, split_reconstructed; exclude the 32 source_row_index values in legacy_excluded_32.csv",
+    "ordered_model_input_checksums": {
+      "train": {
+        "rows": 519974,
+        "ordered_input_sha256": "652459fe687168ed57540bde0817fceb59947eedea043296cc9625e78d868ace"
+      },
+      "validation": {
+        "rows": 64994,
+        "ordered_input_sha256": "7c80d9e919f35b3ea2e7a5cc9d0ffa12ab897bdc0f82940fbe025c615422d7b2"
+      },
+      "test": {
+        "rows": 65000,
+        "ordered_input_sha256": "cea4234737cab62558e5d5df88e06f1e0872d4ed7b282b203f379e887bbe3406"
+      }
+    }
+  },
+  "Reaction-GINE": {
+    "model": {
+      "hidden_dim": 256,
+      "num_layers": 5,
+      "dropout": 0.1,
+      "projection_dim": 128,
+      "temperature": 0.1,
+      "reactant_pool": "atom_mean"
+    },
+    "optimizer": "AdamW",
+    "batch_size": 256,
+    "seed": 42,
+    "epochs": 30,
+    "selected_epoch": 23,
+    "initial_learning_rate": 0.0005,
+    "minimum_learning_rate": 1e-05,
+    "schedule": "epochs 1-10: 5% step warmup then cosine decay to 1e-5; epochs 11-30: continuation at 1e-5",
+    "weight_decay": 1e-05,
+    "gradient_clip_norm": 5.0,
+    "amp": true,
+    "InfoNCE_temperature": 0.1,
+    "loss": "0.5*L_atom + 0.5*L_bond + 0.5*L_symmetric_InfoNCE",
+    "reaction_center_positive_weight": "separately per atom/bond minibatch: clamp(N_negative/N_positive, 1, 20); unweighted BCE if no positives",
+    "loss_reduction": "mean",
+    "selection": "minimum total ORD validation loss, verified at epoch 23",
+    "split_counts": {
+      "train": 828786,
+      "valid": 6129,
+      "test": 6352
+    },
+    "split_membership": "the exact 36 JSONL.gz shards and split field distributed in Zenodo ord/",
+    "split_policy": "retained upstream scaffold split during cleaning; no exact canonical product across splits; no new random split at pretraining time",
+    "test_used_for_training_or_selection": false
+  },
+  "GESA": {
+    "selected_configuration": "trial_011",
+    "public_seed": 123,
+    "selected_epoch": 38,
+    "training": {
+      "warmup_epochs": 5,
+      "max_epochs": 40,
+      "patience": 10,
+      "min_delta_auc": 0.0001,
+      "batch_size": 256,
+      "evaluation_batch_size": 512,
+      "loader_workers": 1,
+      "encoder_learning_rate": 2e-05,
+      "head_learning_rate": 0.0003,
+      "weight_decay": 1e-05,
+      "scheduler_factor": 0.5,
+      "scheduler_patience": 3,
+      "minimum_learning_rate": 1e-06,
+      "gradient_clip_norm": 5.0,
+      "amp": true,
+      "selection": "validation_AUROC_only",
+      "threshold": "maximum_Youden_J_on_validation_only"
+    },
+    "parameters": {
+      "encoder_lr": 2e-05,
+      "head_lr": 0.0003,
+      "dropout": 0.3,
+      "weight_decay": 1e-05,
+      "warmup_epochs": 5,
+      "xsa_dim": 32
+    },
+    "training_seeds": [
+      42,
+      123,
+      2026
+    ],
+    "optimizer": "AdamW",
+    "loss": "BCEWithLogitsLoss, reduction=mean",
+    "positive_weight_formula": "N_ES / N_HS in the actual training split",
+    "original_training_counts": {
+      "total": 472635,
+      "ES": 147851,
+      "HS": 324784
+    },
+    "original_positive_weight": 0.4552287058475787,
+    "released_single_component_training_counts": {
+      "total": 469078,
+      "ES": 145285,
+      "HS": 323793
+    },
+    "positive_weight_if_retraining_on_released_data": 0.4486971614580921,
+    "weight_note": "The released checkpoint is unchanged; the cleaned released data would produce a different class ratio upon retraining.",
+    "selection": "internal validation AUROC with minimum improvement 0.0001; encoder freeze for first 5 epochs",
+    "target_dataset_versions": "data/retrostar_target/version_patch/dataset_versions.json"
+  }
+}

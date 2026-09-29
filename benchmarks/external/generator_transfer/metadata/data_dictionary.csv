@@ -1,0 +1,39 @@
+field,definition
+generator,Source generator; NEAT-POCKET/FLOWR/ResGen
+molecule_id,"Unique record identity, preserving native per-pocket record index"
+canonical_smiles,Canonical isomeric SMILES used during the original analysis
+structure_id,SHA-256 of the saved canonical_smiles; permits cross-generator structure checks
+pocket_id,PDB and ligand identifier used to define the generation pocket
+uniprot,Recorded UniProt accession for the selected target
+native_record_index,1-based index within the referenced native SDF
+scaffold_key,Non-chiral Bemis–Murcko key; non-chiral full SMILES fallback for acyclic structures
+shared_released_train_scaffold,1 if key also occurs in released target training data
+planner_status,success/no_route/timeout/error; no_route is a normal completed search
+route_found,Whether a complete route was returned; empty if unavailable
+route_steps,Reaction-node count for complete route; 0 means target in stock; empty otherwise
+search_time_seconds,Planner-reported search time in seconds
+route_string,"Planner route representation, preserved from original output"
+target_hard,0=ES; 1=HS; empty for excluded planning timeout or error
+label_basis,Complete route <=10 steps: ES; complete >10 or completed no_route: HS
+in_common_evaluation,True if label and all nine scores are valid
+in_SAScore_3_to_4,True for 3 <= SAScore < 4; also require in_common_evaluation to evaluate
+in_no_shared_scaffold_subset,Common evaluation molecule without shared released training key
+SynFrag_clipped,"Clipped adapter display output, provided for traceability; NOT used for metrics"
+GESA_score,Native saved continuous score for GESA; higher is harder
+HS_score_GESA,GESA score used for HS-positive AUROC/AP = native score multiplied by 1
+SAScore,Native saved continuous score for SAScore; higher is harder
+HS_score_SAScore,SAScore score used for HS-positive AUROC/AP = native score multiplied by 1
+SCScore,Native saved continuous score for SCScore; higher is harder
+HS_score_SCScore,SCScore score used for HS-positive AUROC/AP = native score multiplied by 1
+SYBA,Native saved continuous score for SYBA; higher is easier
+HS_score_SYBA,SYBA score used for HS-positive AUROC/AP = native score multiplied by -1
+BR_SAScore_1to10,Native saved continuous score for BR-SAScore; higher is harder
+HS_score_BR_SAScore,BR-SAScore score used for HS-positive AUROC/AP = native score multiplied by 1
+RAscore_XGB,Native saved continuous score for RAscore-XGB; higher is easier
+HS_score_RAscore_XGB,RAscore-XGB score used for HS-positive AUROC/AP = native score multiplied by -1
+GASA_HS_probability,Native saved continuous score for GASA; higher is harder
+HS_score_GASA,GASA score used for HS-positive AUROC/AP = native score multiplied by 1
+DeepSA_HS_probability,Native saved continuous score for DeepSA; higher is harder
+HS_score_DeepSA,DeepSA score used for HS-positive AUROC/AP = native score multiplied by 1
+SynFrag_raw,Native saved continuous score for SynFrag; higher is easier
+HS_score_SynFrag,SynFrag score used for HS-positive AUROC/AP = native score multiplied by -1

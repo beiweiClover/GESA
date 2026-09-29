@@ -1,0 +1,48 @@
+seed: 123
+dataset_version: original
+verify_dataset_hashes: true
+initialization: pretrained
+task_checkpoint: weights/pretrained/TaskGAT_seed{seed}.pt
+reaction_checkpoint: weights/pretrained/ReactionGINE_epoch23.pt
+output: runs/gesa/{version}/seed_{seed}
+cache_dir: runs/molecular_cache
+data:
+  original:
+    train: training_data/target_original/train.csv
+    validation: training_data/target_original/validation.csv
+  single_component:
+    train: training_data/target_single_component/train.csv
+    validation: training_data/target_single_component/validation.csv
+scaling:
+  original: published_training
+  single_component: fit_training
+architecture:
+  hidden_dim: 256
+  num_layers: 5
+  gat_heads: 4
+  encoder_dropout: 0.1
+  nonencoder_dropout: 0.3
+  projection_dim: 256
+  gate_hidden_dim: 128
+  attention_hidden_dim: 128
+  xsa_hidden_dim: 64
+  xsa_output_dim: 32
+  head_hidden_dim: 128
+training:
+  warmup_epochs: 5
+  max_epochs: 40
+  patience: 10
+  min_delta_auroc: 0.0001
+  batch_size: 256
+  evaluation_batch_size: 512
+  loader_workers: 1
+  shard_size: 4096
+  interleave_shards: 16
+  encoder_learning_rate: 0.00002
+  head_learning_rate: 0.0003
+  weight_decay: 0.00001
+  scheduler_factor: 0.5
+  scheduler_patience: 3
+  minimum_learning_rate: 0.000001
+  gradient_clip_norm: 5.0
+  amp: true

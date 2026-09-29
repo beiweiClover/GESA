@@ -1,0 +1,71 @@
+architecture:
+  implementation: torch_geometric.nn.GATConv
+  hidden_dim: 256
+  num_layers: 5
+  heads: 4
+  edge_index_used: true
+  edge_attr_used: true
+  residual: true
+  normalization: LayerNorm
+  activation: GELU
+training:
+  batch_size: 256
+  evaluation_batch_size: 512
+  loader_workers: 1
+  learning_rate: 0.0003
+  head_learning_rate: 0.001
+  weight_decay: 1.0e-05
+  max_epochs: 50
+  patience: 10
+  min_delta_auc: 0.0001
+  scheduler_factor: 0.5
+  scheduler_patience: 3
+  minimum_learning_rate: 1.0e-06
+  gradient_clip_norm: 5.0
+  amp: true
+optimizer: AdamW
+loss: BCEWithLogitsLoss, reduction=mean
+positive_weight_formula: N_ES / N_HS in the actual training split
+positive_weight: 1.1665583333333334
+training_counts:
+  total: 519974
+  ES: 279974
+  HS: 240000
+validation_counts:
+  total: 64994
+  ES: 34994
+  HS: 30000
+test_counts:
+  total: 65000
+  ES: 35000
+  HS: 30000
+training_seeds:
+- 42
+- 123
+- 2026
+per_seed:
+  '42':
+    selected_epoch: 1
+    completed_epochs: 11
+    validation_auroc: 0.9999333209502582
+  '123':
+    selected_epoch: 2
+    completed_epochs: 12
+    validation_auroc: 0.9999671691337563
+  '2026':
+    selected_epoch: 1
+    completed_epochs: 11
+    validation_auroc: 0.9999247228096244
+selection: validation AUROC with minimum improvement 0.0001 and patience 10
+data_membership: Zenodo legacy_sa_650k.csv, split_reconstructed; exclude the 32 source_row_index
+  values in legacy_excluded_32.csv
+ordered_model_input_checksums:
+  train:
+    rows: 519974
+    ordered_input_sha256: 652459fe687168ed57540bde0817fceb59947eedea043296cc9625e78d868ace
+  validation:
+    rows: 64994
+    ordered_input_sha256: 7c80d9e919f35b3ea2e7a5cc9d0ffa12ab897bdc0f82940fbe025c615422d7b2
+  test:
+    rows: 65000
+    ordered_input_sha256: cea4234737cab62558e5d5df88e06f1e0872d4ed7b282b203f379e887bbe3406

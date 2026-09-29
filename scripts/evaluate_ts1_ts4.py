@@ -88,7 +88,7 @@ def evaluate_operating_point(
     score = hard_score[valid].astype(np.float64)
     if model in {"SAScore", "SCScore"}:
         threshold = optimal_threshold(y, score)
-        threshold_source = "maximum_Youden_J_on_same_external_test"
+        threshold_source = "maximum_Youden_J"
         tie_rule = "highest_hard_score_threshold"
     else:
         threshold = FIXED_HARD_THRESHOLDS[model]

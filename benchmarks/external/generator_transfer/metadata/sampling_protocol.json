@@ -1,0 +1,42 @@
+{
+  "NEAT-POCKET": {
+    "requested_per_pocket": 50,
+    "seed_start": 6621,
+    "pocket_radius_angstrom": 6,
+    "classifier_free_guidance": 0.5,
+    "integration_steps": 60,
+    "implementation_note": "Compatibility replacement of unavailable variable-length attention; numerical check retained in author archive."
+  },
+  "FLOWR": {
+    "requested_per_pocket": 50,
+    "seed_start": 48210,
+    "weight": "flowr_noHs.ckpt",
+    "integration_steps": 100,
+    "categorical_sampling": "uniform-sample",
+    "batch_cost": 8,
+    "pocket_cutoff_angstrom": 6,
+    "fragment_or_interaction_guidance": false,
+    "note": "Reference ligand used for pocket definition and official ligand-size sampling; no SA guidance."
+  },
+  "ResGen": {
+    "requested_per_pocket": 50,
+    "seed_start": 47210,
+    "weight": "val_172.pt",
+    "beam_size": 100,
+    "official_default_beam_size": 500,
+    "max_atom_generation_steps": 50,
+    "note": "Beam fixed for compute before SA/planning outcomes; official probability thresholds retained.",
+    "protein_preparation": "First structural model; standard amino-acid heavy atoms with complete N/CA/C/O backbone."
+  },
+  "shared": {
+    "prespecified_pockets": 20,
+    "SA_selection_at_generation": false,
+    "cohort_cap": "First 50 native output records per pocket; actual under-yield retained.",
+    "restricted_SAScore_range": "3 <= SAScore < 4; not an ES/HS labeling rule",
+    "bootstrap_replicates": 2000,
+    "bootstrap_unit": "pocket",
+    "positive_class": "HS",
+    "metric_CI_bootstrap_seed": 6621,
+    "full_vs_SA_contrast_bootstrap_seed": 20261119
+  }
+}

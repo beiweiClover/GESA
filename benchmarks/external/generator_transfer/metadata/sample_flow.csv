@@ -1,0 +1,4 @@
+generator,requested,native_sdf_records,selected_for_structure_audit,scored_eligible,excluded_duplicate,excluded_exact_overlap,excluded_empty_structure,excluded_planning_unlabeled,evaluation_n,ES,HS,evaluation_pockets,restricted_n
+NEAT-POCKET,1000,900,900,837,44,19,0,2,835,171,664,20,197
+FLOWR,1000,1000,1000,945,40,15,0,0,945,272,673,20,198
+ResGen,1000,531,515,472,0,40,3,0,472,78,394,15,115

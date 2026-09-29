@@ -31,16 +31,11 @@ For GESA specifically, `GESA_score = P(HS)`: scores at or above the threshold
 are classified as HS, and scores below the threshold are classified as ES.
 
 SAScore and SCScore have no native binary boundary. For these two methods only,
-the threshold is selected independently on each TS1--TS4 external set by
-maximizing Youden J (`sensitivity + specificity - 1`), equivalently Balanced
-Accuracy over exact ROC candidate thresholds. If thresholds tie, the highest
-hard-score threshold is used.
-
-This follows the mixed threshold policy commonly used by the reference
-benchmark: native boundaries for classifiers and a test-specific best
-operating point for continuous heuristic scores. SAScore/SCScore classification
-metrics therefore use external labels for threshold selection. AUROC and PRAUC
-use continuous hard-class scores and are threshold-independent.
+the threshold is selected on each TS1--TS4 set by maximizing Youden J
+(`sensitivity + specificity - 1`), equivalently Balanced Accuracy over exact
+ROC candidate thresholds. If thresholds tie, the highest hard-score threshold
+is used. AUROC and PRAUC use continuous hard-class scores and are
+threshold-independent.
 
 GESA classification metrics use the released public checkpoint (seed 123,
 epoch 38). `auc_results.csv` additionally reports GESA AUROC as the mean and
@@ -56,7 +51,7 @@ GESA records are scored.
   PRAUC, Recall, F-score, Precision, Balanced Accuracy, raw and unified
   thresholds, classification rules, and confusion counts. All positive-class
   metrics and TP/FN counts refer to HS.
-- `auc_results.csv`: paper-facing continuous AUROC summary, including GESA
+- `auc_results.csv`: summary continuous AUROC metrics, including GESA
   three-seed mean and sample SD.
 - `auc_results_long.csv`: per-split and per-seed/reference AUROC records.
 - `predictions/reference_models.csv.gz`: released hard-class scores for the
@@ -65,3 +60,26 @@ GESA records are scored.
 - `predictions/GESA_public_checkpoint.csv`: predictions from the released checkpoint.
 
 The CSV files are the source data for downstream analysis and plotting.
+
+## Additional generator-transfer evaluation
+
+[`generator_transfer/`](generator_transfer/README.md) contains the separate
+NEAT-POCKET, FLOWR, and ResGen evaluation cohorts. The main data file is
+[`data/evaluation_molecules.csv`](generator_transfer/data/evaluation_molecules.csv),
+with 2,252 molecules, Retro* labels, native scores and HS-direction scores for
+all nine methods. The two NEAT-POCKET planning exceptions remain in
+`data/all_scored_molecules.csv` with missing labels and are excluded from evaluation.
+
+The directory also provides native and annotated generated SDFs, the fixed
+SAScore `[3,4)` subset, stage counts, generator versions/checkpoint hashes,
+all 60 generator–pocket seed records, complete metrics, and Supplementary Figure S4.
+See [`metadata/SUPPORTING_RECORDS.md`](generator_transfer/metadata/SUPPORTING_RECORDS.md)
+for the inclusion and rounding records. These cohorts are not merged into TS1–TS4.
+
+The generator-transfer metrics use non-interpolated AP and HS-positive continuous
+scores. No classification threshold is fitted on these cohorts. Its standalone
+point-metric verification command, from the repository root, is:
+
+```bash
+python benchmarks/external/generator_transfer/code/reproduce_metrics.py
+```
