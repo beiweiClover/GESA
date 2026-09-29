@@ -148,3 +148,9 @@ extract the dataset locally and set the training and validation paths in
 
 Benchmark and case-study tables are retained as source data. Rendered figures
 and internal release-building tools are not included.
+
+## License
+
+The original GESA source code is released under the [MIT License](LICENSE).
+Third-party datasets and software retain their respective licenses and terms
+of use.
