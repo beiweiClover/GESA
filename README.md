@@ -83,9 +83,9 @@ python scripts/predict.py \
 
 GESA uses `0 = ES` (easy to synthesize) and `1 = HS` (hard to synthesize).
 HS is the positive class throughout training and evaluation. `GESA_score` is
-`P(HS)` rather than an easy-to-synthesize probability, so larger values indicate
-greater predicted synthetic difficulty. At the natural probability boundary,
-`GESA_score >= 0.5` is classified as HS and `GESA_score < 0.5` as ES.
+the model's uncalibrated synthetic-difficulty score. Larger values indicate
+greater predicted difficulty. The default classification threshold is 0.5.
+Scores at or above this threshold are classified as HS and lower scores as ES.
 
 Accordingly, AUROC and AP use HS as the positive label; Recall, Precision,
 and F1-score are HS-class metrics; Specificity is the true-negative rate for ES.
@@ -201,7 +201,7 @@ This analysis compares three independently sampled pairs of class-balanced
 - `benchmarks/internal/matched_data_contribution/`: controlled training-data comparison and Figure S5 source data
 - `case_studies/`: compact stepwise-route and SyntheMol manuscript source data
 - `baselines/`: standard GNN baseline implementations
-- `RELEASE_MANIFEST.csv`: file sizes and SHA256 checksums
+- `RELEASE_MANIFEST.csv`: file sizes and SHA256 checksums for the published file bytes. Use the raw downloads when verifying hashes on systems that convert line endings on checkout.
 
 Benchmark and case-study tables are retained as source data. The generator-transfer
 analysis also includes Supplementary Figure S4 and its plotting source data.

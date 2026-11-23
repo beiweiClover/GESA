@@ -25,11 +25,10 @@ All four retained scores use `0 = easier` and `1 = harder`:
 - SCScore difficulty: `(SCScore_raw_1to5 - 1) / 4`.
 - BR-SAScore difficulty: `(BR-SAScore_raw_1to10 - 1) / 9`.
 - SynFrag difficulty: `1 - clip(SynFrag_native_ease, 0, 1)`.
-- `gesa_p_hs`: GESA `P(HS)`; `gesa_class` uses the fixed 0.5 boundary.
+- `gesa_p_hs`: uncalibrated GESA synthetic-difficulty score. `gesa_class` uses the fixed 0.5 cutoff.
 
-The first three are direction/range transformations, not probability
-calibrations. Their absolute magnitudes should not be read as directly
-interchangeable with GESA probabilities.
+The first three transformations align score direction and range. The
+scores support ranking within each method.
 
 ## Retro* semantics
 

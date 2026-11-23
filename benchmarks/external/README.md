@@ -8,7 +8,7 @@ GESA:
 
 ## Evaluation protocol
 
-The positive class is HS (`target_hard = 1`; ES is `0`). AUROC and PRAUC treat
+The positive class is HS (`target_hard = 1`; ES is `0`). AUROC and AP treat
 HS as the positive label. Recall, Precision, and F-score are calculated for HS,
 whereas Specificity is the true-negative rate for ES. Thus TP means correctly
 predicted HS, FN means HS predicted as ES, TN means correctly predicted ES, and
@@ -25,17 +25,18 @@ implementation:
 | GASA | HS probability `>= 0.5` | official definition |
 | DeepSA | HS probability `>= 0.5` | official definition |
 | SynFrag | ES probability `<= 0.5` | official definition |
-| GESA | HS probability `>= 0.5` | natural model boundary |
+| GESA | synthetic-difficulty score `>= 0.5` | default cutoff |
 
-For GESA specifically, `GESA_score = P(HS)`: scores at or above the threshold
-are classified as HS, and scores below the threshold are classified as ES.
+`GESA_score` is an uncalibrated synthetic-difficulty score. Scores at or
+above the default cutoff are classified as HS and lower scores as ES.
 
 SAScore and SCScore have no native binary boundary. For these two methods only,
 the threshold is selected on each TS1--TS4 set by maximizing Youden J
 (`sensitivity + specificity - 1`), equivalently Balanced Accuracy over exact
 ROC candidate thresholds. If thresholds tie, the highest hard-score threshold
-is used. AUROC and PRAUC use continuous hard-class scores and are
-threshold-independent.
+is used. The resulting threshold-dependent metrics are test-set-optimized
+reference values. AUROC and average precision (AP, stored as `PRAUC` in the
+existing CSV) are calculated from continuous scores.
 
 GESA classification metrics use the released public checkpoint (seed 123,
 epoch 38). `auc_results.csv` additionally reports GESA AUROC as the mean and

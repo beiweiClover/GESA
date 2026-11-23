@@ -3,14 +3,14 @@
 ## Files
 
 - `stepwise_routes_gesa.csv`: 49 reaction products from seven complete,
-  graph-valid linear routes. The reaction SMILES, product SMILES, GESA `P(HS)`,
+  graph-valid linear routes. The reaction SMILES, product SMILES, GESA score,
   and fixed-threshold ES/HS call are retained for every step.
 - `route_summary.csv`: one row per route with publication metadata, the Spearman
   correlation between step position and GESA score, and the ordered score
   sequence as JSON.
 
 `reaction_smiles` uses `reactants>>product`; `product_smiles` is the exact right
-side of that source reaction SMILES. `gesa_p_hs` ranges from 0 to 1, with larger
+side of that source reaction SMILES. `gesa_p_hs` stores the uncalibrated GESA score on a 0 to 1 scale, with larger
 values indicating greater predicted difficulty. `gesa_class` is `HS` when
 `gesa_p_hs >= 0.5` and `ES` otherwise.
 
